@@ -1,16 +1,32 @@
 import styled from 'styled-components';
 
+export const Header = styled.div`
+    max-width: 85%;
+    width: 100%;
+    margin: 0 auto;
+    background: #88B0E394;
+    display:flex;
+    padding:1%;
+    border-radius: 20px;
+
+    h1{
+        color: #fff;
+        font-size: 25px;
+        font-weight:bold;
+
+    }
+`;
 export const Paises = styled.div`
     max-width: 85%;
     width: 100%;
-    margin: 5% auto;
-    background: #9781E4;
-    padding:10px;
+    margin: 2% auto;
+    background: #88B0E394;
+    padding:1%;
     display:flex;
     flex-wrap:wrap;
     flex-direction: row;
-    flex-grow: initial;
-    padding:1%;
+    justify-content:center;
+    border-radius: 20px;
 `;
 export const Card = styled.div`
     display:flex;
@@ -21,7 +37,7 @@ export const Card = styled.div`
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
-
+    text-align:center;
     img{
         width:100%;
         height:80%;

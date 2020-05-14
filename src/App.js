@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios'
 import Countries from './pages/Countries/index';
 import './App.css';
+import data from './data/countries.json';
 
 class App extends React.Component{
   constructor(props){

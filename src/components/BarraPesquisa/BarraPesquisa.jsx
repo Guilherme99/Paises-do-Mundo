@@ -6,7 +6,7 @@ function BarraPesquisa(props) {
   return(
     <Barra>
         <Search>
-            <input type="text" placeholder="Digite o nome do Pais" name="pesquisa" onChange={props.handleSearch} />
+            <input type="text" placeholder="Digite o nome do Pais" name="pesquisa" value={props.value} onChange={props.handleSearch} />
         </Search>
     </Barra>
   );

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Paises, Card} from './styles';
+import {Paises, Header, Card} from './styles';
 import Search from './../../components/BarraPesquisa/BarraPesquisa'
 
 class Countries extends Component{
@@ -8,6 +8,7 @@ class Countries extends Component{
         this.state = {
             paises: this.props.country,
             paisesFilter: this.props.country,
+            pesquisa: ""
         }
     }
 
@@ -16,7 +17,7 @@ class Countries extends Component{
     
         const value = event.target.value;
         
-        this.setState({paisesFilter: this.filterSearch(value)});
+        this.setState({pesquisa: value, paisesFilter: this.filterSearch(value)});
     
       }
       filterSearch = (value) => {
@@ -25,14 +26,18 @@ class Countries extends Component{
         return  paises.filter(pais => (pais.name.toLowerCase()).includes(value.toLowerCase()));
         
     }
-    
     render(){
-        const {paisesFilter} = this.state;
+        const {paisesFilter, pesquisa} = this.state;
         
         return (
-            
+            <>
+                <Header>
+                    <h1>Lista de países </h1>
+                    <img src="" alt=""/>
+                </Header>
+
                 <Paises>
-                    <Search handleSearch={this.handleSearch}/>
+                    <Search handleSearch={this.handleSearch} value={pesquisa}/>
                     { 
                     paisesFilter.map((pais) => {
                         return (
@@ -51,6 +56,7 @@ class Countries extends Component{
                 }
                     
                 </Paises>
+            </>
         )
     }
 }
