@@ -13,7 +13,7 @@ export const Header = styled.div`
         color: #fff;
         font-size: 25px;
         font-weight:bold;
-
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
 `;
 export const Paises = styled.div`
